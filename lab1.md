@@ -1,11 +1,11 @@
-# การทดลองที่1
+# การทดลองที่ 1 เรื่อง การเขียนโปรแกรมเพื่อรันบนไมโครคอนโทรเลอร์
 
 ## วัตถุประสงค์  
 1.เพื่อศึกษาเกี่ยวกับการทำงานและการเชื่อมต่อเบื้องต้นของ microcontroller 
 
 2.เพื่อศึกษาเกี่ยวกับการ run microcontroller
 
-### อุปกรณ์ที่ใ้ช้
+### อุปกรณ์ที่ใช้
 1.คอมพิวเตอร์
 
 2.microcontroller ESP01
@@ -13,26 +13,41 @@
 3.อุปกรณ์ต่อ USB-Serial
 
 #### ศึกษาข้อมูลเบื้องต้น
+run example 1 https://youtu.be/NLIUsWLEpmg
 
+code https://github.com/choompol-boonmee/lab63b/blob/master/examples/01_Serial-Monitor/src/main.cpp
 ##### วิธีทำการทดลอง
- 1.เชื่อมต่อ microcontroller เข้ากับคอมพิวเตอร์ด้วยการต่อ  USBไปยังSerial
+1.เชื่อมต่อ microcontroller เข้ากับคอมพิวเตอร์ด้วยการต่อ  USBไปยังSerial
  
- 2.เปิด cmd ซึ่งจากตัวอย่างอยู้ในโฟล์เดอร์ pattani ใช้คำสั่ง cd
+2.เปิด cmd ซึ่งจากตัวอย่างอยู้ในโฟล์เดอร์ pattani ใช้คำสั่ง cd
  
- 3.ใช้คำสั่ง cd_Serial-Monitor ตามด้วย vi srv/main.cpp  เพื่อการดูและศึกษาโค้ดตัวอย่างโปรแกรมที่ใช้ในการทดสอบ microcontroller
+3.ใช้คำสั่ง cd_Serial-Monitor ตามด้วย vi srv/main.cpp  เพื่อการดูและศึกษาโค้ดตัวอย่างโปรแกรมที่ใช้ในการทดสอบ microcontroller
+ ![image](https://user-images.githubusercontent.com/80880126/112196650-d0dd7480-8c3d-11eb-85c9-dffb31868fa9.png)
+
  
- 4.ใช้คำสั่ง vi platformio.ini เพื่อให้ทราบข้อมูลเกี่ยวกับ  microcontroller
+4.ใช้คำสั่ง vi platformio.ini เพื่อให้ทราบข้อมูลเกี่ยวกับ  microcontroller
  
- 5.ใช้คำสั่ง pio run -t upload เพื่อทำการรัน microcontroller
+5.ใช้คำสั่ง pio run -t upload เพื่อทำการรัน microcontroller
 
 6.กดที่ปุ่มของ microcontroller เพื่อให้โปรแกรมรับคำสั่งใหม่เข้าไป
  
- 7.หากขึ้น success ให้ใช้สั่ง pio device monitor
+7.หากขึ้น success ให้ใช้สั่ง pio device monitor
 
 8.รอดูผลการทดลอง
 
-##### การบันทึกผลการทดลอง
+###### การบันทึกผลการทดลอง
+จากการใช้คำสั่ง vi platformio.ini ทำให้เราทราบข้อมูลดังนี้
 
-##### อภิปรายผลการทดลอง
+1.เป็น platform ของ espressif8266
 
+2.bord ชื่อ esp01_1m
+
+3.ใช้วิธีการเขียนโปรแกรม arduino
+
+###### อภิปรายผลการทดลอง
+จากการใช้คำสั่ง vi src/main.cpp ทำให้เราทราบว่าโปรแกรม 01_Serial-Monitor มี 2 ส่วนดังนี้
+
+1.ส่วน set up
+
+2.ส่วน loop ที่เพิ่มจะเพิ่มตัวแปร count และแสดงผลของตัวแปรโดยมีการหน่วงเวลา 1000 ms โดยการทดลองการเขียนโปรแกรมเพื่อรันบนไมโครคอนโทรเลอร์จะเห็นว่าเมื่อเราอัพโหลดโปรแกรม 01_Serial-Monitor ลงในตัวไมโครคอนโทรเลอร์ที่เรียบร้อยแล้ว และใช้คำสั่ง pio device monitor เพื่อดูการทำงานของไมโทรคอนโทรเลอร์ หน้าจอจะขึ้นว่ามีการเปลี่ยนแปรทุกๆ 1 วินาทีตามโปรแกรม
 ##### คำถามหลังกาทดลอง
