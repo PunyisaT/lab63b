@@ -15,7 +15,8 @@
 #### ศึกษาข้อมูลเบื้องต้น
 run example 1 https://youtu.be/NLIUsWLEpmg
 
-code https://github.com/choompol-boonmee/lab63b/blob/master/examples/01_Serial-Monitor/src/main.cpp
+code 01_Serial-Monitor https://github.com/choompol-boonmee/lab63b/blob/master/examples/01_Serial-Monitor/src/main.cpp
+
 ##### วิธีทำการทดลอง
 1.เชื่อมต่อ microcontroller เข้ากับคอมพิวเตอร์ด้วยการต่อ  USBไปยังSerial
  
@@ -50,4 +51,4 @@ code https://github.com/choompol-boonmee/lab63b/blob/master/examples/01_Serial-M
 1.ส่วน set up
 
 2.ส่วน loop ที่เพิ่มจะเพิ่มตัวแปร count และแสดงผลของตัวแปรโดยมีการหน่วงเวลา 1000 ms โดยการทดลองการเขียนโปรแกรมเพื่อรันบนไมโครคอนโทรเลอร์จะเห็นว่าเมื่อเราอัพโหลดโปรแกรม 01_Serial-Monitor ลงในตัวไมโครคอนโทรเลอร์ที่เรียบร้อยแล้ว และใช้คำสั่ง pio device monitor เพื่อดูการทำงานของไมโทรคอนโทรเลอร์ หน้าจอจะขึ้นว่ามีการเปลี่ยนแปรทุกๆ 1 วินาทีตามโปรแกรม
-##### คำถามหลังกาทดลอง
+##### คำถามหลังการทดลอง
