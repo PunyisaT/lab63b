@@ -29,8 +29,24 @@ code 01_Serial-Monitor https://github.com/choompol-boonmee/lab63b/blob/master/ex
  
 3.ใช้คำสั่ง cd_Serial-Monitor ตามด้วย vi srv/main.cpp  เพื่อการดูและศึกษาโค้ดตัวอย่างโปรแกรมที่ใช้ในการทดสอบ microcontroller
  
- ![image](https://user-images.githubusercontent.com/80880126/112196650-d0dd7480-8c3d-11eb-85c9-dffb31868fa9.png)
+ ```
+#include <Arduino.h>
 
+int cnt = 0;
+
+void setup()
+{
+	Serial.begin(115200);
+}
+
+void loop()
+{
+	cnt++;
+	Serial.printf("PATTANI :%d\n",cnt);
+	delay(1000);
+}
+
+```
  
 4.ใช้คำสั่ง vi platformio.ini เพื่อให้ทราบข้อมูลเกี่ยวกับ  microcontroller
  
