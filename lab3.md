@@ -37,8 +37,33 @@ run relay https://www.youtube.com/watch?v=6JnhaUILGuw
 4.ใช้คำสั่ง cd 03_Output-Port ตามด้วยคำสั่ง 1s และคำสั่ง pwd
 
 5.ใช้คำสั่ง vi src/main.cpp จะขึ้นโค้ดดังนี้
-![image](https://user-images.githubusercontent.com/80880126/112193792-d5545e00-8c3a-11eb-8700-35db65ce02ed.png)
+```
+#include <Arduino.h>
+#include <ESP8266WiFi.h>
 
+int cnt = 0;
+
+void setup()
+{
+	Serial.begin(115200);
+	pinMode(0, OUTPUT);
+	Serial.println("\n\n\n");
+}
+
+void loop()
+{
+	cnt++;
+	if(cnt % 2) {
+		Serial.println("========== ON ===========");
+		digitalWrite(0, HIGH);
+	} else {
+		Serial.println("========== OFF ===========");
+		digitalWrite(0, LOW);
+	}
+	delay(500);
+}
+
+```
 โค้ดของโปรแกรมนี้ไ้้เซตที่พอร์ท 0 คือ พอร์ทเอ้าพุต และมีคำสั่งวนลูปทุกๆ 500 ms โยจะนับ cnt ไปเรื่อยๆโดยที่เมือ cnt เลขคู่เป็น off และคี่เป็น on
 ใช้คำสั่ง pio device monitor เพื่อเตรียมสแกนหา wifi
 
