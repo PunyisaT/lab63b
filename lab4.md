@@ -37,8 +37,33 @@
 
 6.พิมพ์คำสั่ง vi src/main.cpp เมื่อกด Enter จะขึ้นโค้ดดังนี้
 
-![image](https://user-images.githubusercontent.com/80880126/112266695-f488d500-8ca6-11eb-882f-b36041945d7e.png)
+```
+#include <Arduino.h>
+#include <ESP8266WiFi.h>
 
+int cnt = 0;
+
+void setup()
+{
+	Serial.begin(115200);
+	pinMode(0, OUTPUT);
+	Serial.println("\n\n\n");
+}
+
+void loop()
+{
+	cnt++;
+	if(cnt % 2) {
+		Serial.println("========== ON ===========");
+		digitalWrite(0, HIGH);
+	} else {
+		Serial.println("========== OFF ===========");
+		digitalWrite(0, LOW);
+	}
+	delay(500);
+}
+
+```
 โดยโค้ดของโปรแกรมนี้ได้เซตที่พอร์ท 0 คือ input พอร์ท 2 คือ output และ อ่านจะอ่านข้อมูลจากพอร์ท 0 โดยให้เป็นข้อมูลดิจิทัล(มีค่า 0 1) และแสดงผลว่าอ่านได้เท่าไหร่โดยถ้าเป็น 1 จะเป็นค่า low ที่พอร์ท 2 
 และถ้าเป็น 0 จะเป็นค่า high ที่พอร์ท 2 
 
