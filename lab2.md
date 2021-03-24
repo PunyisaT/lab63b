@@ -21,9 +21,12 @@ code 02_scan-wifi https://github.com/choompol-boonmee/lab63b/blob/master/example
 ##### วิธีทำการทดลอง
 1.เชื่อมต่อ microcontroller เข้ากับคอมพิวเตอร์ด้วยการต่อ  USB ไปยัง Serial
 
-2.เปิด cmd ใช้คำสั่งซึ่งจากตัวอย่างอยู่ในโฟล์เดอร์ pattani ใช้คำสั่ง cd
+2.เปิด cmd ซึ่งจากตัวอย่างอยู้ในโฟล์เดอร์ ใช้คำสั่ง cd pattani 
+
+3.ใช้คำสั่ง cd 02_scan-wifi
 
 3.ใช้คำสั่ง 1s ตามด้วยค่ำสั่ง vi src/main.cpp เพื่อเตรียมอัพโหลดโปรแกรมใน microcontroller
+
 ![image](https://user-images.githubusercontent.com/80880126/112181568-22cace00-8c2f-11eb-8acd-444cdbe95bd4.png)
 
 
@@ -31,10 +34,13 @@ code 02_scan-wifi https://github.com/choompol-boonmee/lab63b/blob/master/example
 
 5.ใช้คำสั่ง pio device monitor เพื่อเตรียมสแกนหา wifi
 
+![image](https://user-images.githubusercontent.com/80880126/112263855-8c37f480-8ca2-11eb-863b-71d68cf96fa7.png)
+
+
 ###### การบันทึกผลการทดลอง
 จากการใช้คำสั่ง pio device monitor จะเริ่มสแกนหา wifi จะขึ้นเป็นจำนวนและชื่อของwifiที่ตรวจพบ
+
 ###### อภิปรายผลการทดลอง
 จากการทดลองการเขียนโปรแกรมค้นหาไวไฟ จะเห็นว่าเมื่อเราอัพโหลดโปรแกรมลงในไมโครคอนโทรเลอร์ และใช้คำสั่ง pio device monitor เพื่อดูการทำงานของไมโครคอนโทรเลอร์และหน้าจอจะแสดงผลจำนวนและชื่อของwifiที่ตรวจพบ
-
 
 ###### คำถามหลังการทดลอง
