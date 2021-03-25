@@ -71,7 +71,7 @@ void loop()
 
 7.กดปุ่มอัพโหลดและรีเซตที่ตัวไมโทรคอนโทรเลอร์เพื่อให้ตัวโปรแกรมอัพโหลดเข้าไปในตัว microcontroller
 
-8.pio device monitor แล้วดูผลลัพท์
+8.pio device monitor แล้วดูผลการทดลอง
 
 ![image](https://user-images.githubusercontent.com/80880126/112264361-5c3d2100-8ca3-11eb-8945-d37c9caffd7d.png)
 
@@ -84,7 +84,7 @@ void loop()
 
 ###### การบันทึกผลการทดลอง
 หลังจากที่รันคำสั่ง
->pio device monitor
+pio device monitor
 จะแสดงผล on-off สลับกับไปทุกๆครึ่งวินาทีและ port 0 จะไฟติดเมื่อ on
 และหลังจากที่ต่อรีเลย์เพื่อควบคุมการเปิด-ปิดสวิตซ์จะแสดงผล on-off สลับกับไปทุกๆครึ่งวินาทีและไฟติดเมื่อ on
 
