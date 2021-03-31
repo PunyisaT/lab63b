@@ -72,7 +72,7 @@ https://github.com/choompol-boonmee/lab63b/tree/master/examples
 	- ส่วนของ Set up
 		- Serial.beginset up : กำหนดความเร็วของการ Set up 
 		- set up : กำหนด Port 0 ของ Output หรือ Port ... ของ Input
-		- pinMode 
+		- pinMode :  แสดงถึง output
 		- delay(...) : ความหน่วงเวลาของการ Set up
 
 	- ส่วนที่ 3 loop
