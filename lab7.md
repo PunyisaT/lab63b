@@ -1,4 +1,4 @@
-# การทดลองที่ 7 เรื่อง การใช้ไวไฟในการควบคุมอุปกรณ์ต่างๆ
+# การทดลองที่ 7 เรื่อง การใช้ไวไฟในการควบคุมหลอด LED
 ## วัตถุประสงค์
 
 1.เพื่อคิดค้นการทำงานในการใช้ไมโครคอลโทรเลอร์ในการนำมาประยุกต์ใช้
@@ -34,11 +34,7 @@
 
 03 run relay https://youtu.be/6JnhaUILGuw
 
-04 run example 4 https://youtu.be/nFqoZT26U5k
-
 05 run wifi https://youtu.be/VX-QNQcO-b4
-
-06 run wiri AP https://youtu.be/T26DVHePlTs
 
 จาก source code จากอาจารย์
 
@@ -75,9 +71,8 @@ https://github.com/choompol-boonmee/lab63b/tree/master/examples
 		- pinMode :  แสดงถึง output
 		- delay(...) : ความหน่วงเวลาของการ Set up
 
-	- ส่วนที่ 3 loop
-		- WiFi.scanNetworks() : จำนวน Network หรือผลของการสแกนไวไฟรอบๆ
-		- digitalWrite(0,...) : อ่านค่าของ Port 0 ผลที่ได้จะมีค่าแค่ Low or High
+	- ส่วนที่  loop
+		- digitalWrite(0,1) : อ่านค่าของ Port 0 ผลที่ได้จะมีค่าแค่ Low or High
 		- delay(...) : ความหน่วงเวลาของการสแกนหาไวไฟและความหน่วงเวลาของการแชร์ไวไฟ
 	- พิมพ์ **:q** เพื่อออกจากโปรแกรมที่ 7
 	- *เนื้อหารายละเอียดของโปรแกรมที่แสดงใน platformio*
@@ -86,8 +81,14 @@ https://github.com/choompol-boonmee/lab63b/tree/master/examples
 //#include <WiFiClient.h>
 #include <ESP8266WebServer.h>
 
-const char* ssid = "LAB-7";
-const char* password = "1234567890";
+const char* ssid = "Toey-Fern";
+const char* password = "13121313";
+
+//ปรับเปลี่ยน IPAddress ให้ตรงกับ Wifiของบ้านตัวเอง
+
+IPAddress local_ip(192,168,1,45)  
+IPAddress gateway(192,168,1,1);
+IPAddress subnet(255, 255, 255, 0);
 
 ESP8266WebServer server(80);
 
@@ -121,50 +122,22 @@ void setup(void) {
       Serial.println("/");
 }
 void loop() {
-// Check if a client has connected
-WiFiClient client = server.available();
-if (!client) {
-return;
+     server.handleClient();
+     // Wait until the client sends some data
+    void loop()
+{
+	cnt++;
+	if(cnt % 2) {
+		Serial.println("========== ON ===========");
+		digitalWrite(0, HIGH);
+	} else {
+		Serial.println("========== OFF ===========");
+		digitalWrite(0, LOW);
+	}
+	delay(500);
 }
-// Wait until the client sends some data
-Serial.println("new client");
-while(!client.available()){
-delay(1);
+
 }
-// Read the first line of the request
-String request = client.readStringUntil('\r'); 
-Serial.println(request);
-client.flush();
-// Match the request
-int value = LOW;
-if (request.indexOf("/LED=ON") != -1) {
-digitalWrite(ledPin, HIGH);
-value = HIGH;
-}
-if (request.indexOf("/LED=OFF") != -1) {
-digitalWrite(ledPin, LOW);
-value = LOW;
-}
-// Set ledPin according to the request
-//digitalWrite(ledPin, value);
-// Return the response
-client.println("HTTP/1.1 200 OK");
-client.println("Content-Type: text/html");
-client.println(""); // do not forget this one
-client.println("<!DOCTYPE HTML>");
-client.println("<html>");
-client.print("Led pin is now: ");
-if(value == HIGH) { 
-client.print("On");
-}else { client.print("Off");
-}
-client.println("<br><br>");
-client.println("<a href=\"/LED=ON\"\"><button>Turn Off </button></a>");
-client.println("<a href=\"/LED=OFF\"\"><button>Turn On </button></a><br />");
-client.println("</html>");
-delay(1);
-Serial.println("Client disonnected");
-Serial.println("");
 ##### การบันทึกผลการทดลอง
 
   
