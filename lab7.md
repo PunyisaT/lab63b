@@ -21,6 +21,8 @@
 
 6.ไวไฟที่เชื่อมต่กับไมโครคอลโทรเลอร์
 
+7.รีเลย์
+
 #### ศึกษาข้อมูลเบื้องต้น
 ศึกษาจากคลิปการทดลองที่ผ่านมา 
 
@@ -67,12 +69,10 @@ https://github.com/choompol-boonmee/lab63b/tree/master/examples
 		- IPAddress gateway(...,...,...,...) : คือ Default gateway
 		- IPAddress subnet(...,...,...,...) :คือ Subnet Mask
 		- ESP8266WebServer server(...) : กำหนดให้งาน server ที่ port
-	- ส่วนของ 2 Set up
-		- Serial.begin(...) : กำหนดความเร็วของการ Set up 
-		- pinMode(0, OUTPUT) : กำหนด Port 0 ของ Output หรือ Port ... ของ Input
-		- WiFi.mode(WIFI_STA) : การเปิดไวไฟภายในตัวไมโครคอนโทรเลอร์
-		- WiFi.softAP(ssid, password) : การรันค่า ssid, password
-		- WiFi.softAPConfig(local_ip, gateway, subnet) : การรันค่า local_ip, gateway, subnet
+	- ส่วนของ Set up
+		- Serial.beginset up : กำหนดความเร็วของการ Set up 
+		- set up : กำหนด Port 0 ของ Output หรือ Port ... ของ Input
+		- pinMode 
 		- delay(...) : ความหน่วงเวลาของการ Set up
 
 	- ส่วนที่ 3 loop
