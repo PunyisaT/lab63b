@@ -2,7 +2,9 @@
 ## วัตถุประสงค์
 
 1.เพื่อคิดค้นการทำงานในการใช้ไมโครคอลโทรเลอร์ในการนำมาประยุกต์ใช้
+
 2.เพื่อศึกษาเกี่ยวกับการเขียนโครงสร้างของ code program ในการนำมาประยุกต์ใช้
+
 3.เพื่อศึกษาข้อมูลของแลปที่ผ่านมา
 
 ### อุปกรณ์ที่ใช้
@@ -19,7 +21,21 @@
 
 6.ไวไฟที่เชื่อมต่กับไมโครคอลโทรเลอร์
 #### ศึกษาข้อมูลเบื้องต้น
+ศึกษาจากคลิปการทดลองที่ผ่านมา 
 
+01 run example 1 https://youtu.be/NLIUsWLEpmg
+
+02 run example 2 https://youtu.be/yBjab0UNuB8
+
+03 run example 3 https://youtu.be/CCnN1WJsXQY
+
+03 run relay https://youtu.be/6JnhaUILGuw
+
+04 run example 4 https://youtu.be/nFqoZT26U5k
+
+05 run wifi https://youtu.be/VX-QNQcO-b4
+
+06 run wiri AP https://youtu.be/T26DVHePlTs
 
 
 ##### วิธีการทำทดลอง
