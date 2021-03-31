@@ -37,6 +37,10 @@
 
 06 run wiri AP https://youtu.be/T26DVHePlTs
 
+จาก source code จากอาจารย์
+
+https://github.com/choompol-boonmee/lab63b/tree/master/examples
+
 
 ##### วิธีการทำทดลอง
 
